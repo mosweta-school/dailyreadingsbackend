@@ -70,6 +70,18 @@ app.get("/api/liturgy", async (req, res) => {
   }
 });
 
+app.get("/", async (req, res) => {
+  try {
+    res.send("Welcome to the Liturgy API.");
+  } catch (err) {
+    console.error("❌ Root Route Error:", err?.message || "Unknown Error");
+    res.status(500).json({
+      error: "Failed to load root route",
+      details: err?.message || "Check your internet connection or WSL DNS settings",
+    });
+  }
+});
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port:${PORT}`);
 });
