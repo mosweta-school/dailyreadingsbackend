@@ -14,6 +14,8 @@
   "dependencies": {
     "cors": "^2.8.6",
     "evangelizo": "^1.3.0",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "ws": "^8.21.0"
   }
 }
